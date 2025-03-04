@@ -1,5 +1,8 @@
 ## Commit Logs
 
+**1.0.2**
++ adjusted routes config -> added basename=""
+
 **1.0.1**
 + adjusted config
 
