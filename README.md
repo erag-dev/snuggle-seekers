@@ -1,5 +1,8 @@
 ## Commit Logs
 
+**1.1.0**
++ added subtle animations
+
 **1.0.5**
 + adjusted routes config:
     - returned custom error page

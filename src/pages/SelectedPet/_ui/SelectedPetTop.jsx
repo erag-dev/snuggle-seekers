@@ -1,4 +1,7 @@
 
+import { gsap } from "gsap"
+import { useGSAP } from "@gsap/react"
+
 import AppImg from "components/AppImg"
 import { SectionNormal } from "components/Section"
 
@@ -6,7 +9,23 @@ import mainLuna from "assets/pet/luna.png"
 import lunaMsg01 from "assets/pet/text01.png"
 import lunaMsg02 from "assets/pet/text02.png"
 
+gsap.registerPlugin(useGSAP);
+
 const SelectedPetTop = () => {
+
+    useGSAP(() => {
+        gsap.to('.snuggle-selectedpet__top-purr', {
+            autoAlpha: 1,
+            duration: 0.7,
+            repeat: -1,
+            yoyo: true,
+            stagger: {
+                each: 0.15
+            },
+            ease: 'power1.inOut'
+        });
+    });
+
     return (
         <SectionNormal extraClass="snuggle-selectedpet__top">
 
