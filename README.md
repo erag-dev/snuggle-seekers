@@ -1,5 +1,9 @@
 ## Commit Logs
 
+**1.0.4**
++ adjusted routes config:
+    - hide custom error page
+
 **1.0.3**
 + adjusted routes config:
     - removed basename
