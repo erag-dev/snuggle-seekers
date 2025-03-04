@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react"
 import { 
-	HashRouter,
-	// BrowserRouter as Router, 
+	// HashRouter,
+	BrowserRouter as Router, 
 	Routes, 
 	Route,
 } from "react-router-dom"
@@ -28,7 +28,7 @@ const ErrorPageNotFound = lazy(() => import('pages/Error404'));
 const routes = () => {
 
 	return (		
-		<HashRouter>
+		<Router basename="/snuggle-seekers">
 			<Suspense fallback={<AppLoader isShow={true} />}>
 				<Routes>
 
@@ -67,7 +67,7 @@ const routes = () => {
 
 				</Routes>
 			</Suspense>
-		</HashRouter>
+		</Router>
 	)
 };
 

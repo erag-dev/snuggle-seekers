@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react-swc'
 
 export default defineConfig({
     base: "/snuggle-seekers/",
+    build: {
+        outDir: 'dist',
+    },
     plugins: [
         {
             name: 'treat-js-files-as-jsx',
