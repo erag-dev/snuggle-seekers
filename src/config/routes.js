@@ -27,7 +27,7 @@ const ErrorPageNotFound = lazy(() => import('pages/Error404'));
 const routes = () => {
 
 	return (		
-		<Router>
+		<Router basename="/snuggle-seekers">
 			<Suspense fallback={<AppLoader isShow={true} />}>
 				<Routes>
 
