@@ -1,1 +1,0 @@
-import{j as s}from"./index-DCBMTPUb.js";import{A as r,B as e}from"./index-DqzuRlLl.js";const t="/assets/404-DcEhQRBE.png",i=()=>s.jsx("div",{className:"error404",children:s.jsxs("div",{className:"error404__inner",children:[s.jsx(r,{src:t}),s.jsx(e,{isDiv:!0,btnLbl:"Go Back Home",extraClass:"pink align--c"})]})});export{i as default};
