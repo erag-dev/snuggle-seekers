@@ -1,5 +1,10 @@
 ## Commit Logs
 
+**1.0.3**
++ adjusted routes config:
+    - removed basename
+    - changed BrowserRouter to HashRouter
+
 **1.0.2**
 + adjusted routes config -> added basename=""
 
