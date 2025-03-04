@@ -62,7 +62,7 @@ const routes = () => {
 						element={<DonatePage/>} 
 					/>
 
-					{/* <Route path="*" element={<ErrorPageNotFound/>} /> */}
+					<Route path="*" element={<ErrorPageNotFound/>} />
 					{/* <Route path="unauthorized" element={<ErrorPageUnauthorized/>} /> */}
 
 				</Routes>

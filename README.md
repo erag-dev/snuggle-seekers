@@ -1,5 +1,10 @@
 ## Commit Logs
 
+**1.0.5**
++ adjusted routes config:
+    - returned custom error page
++ vite.config: revised base 
+
 **1.0.4**
 + adjusted routes config:
     - hide custom error page
