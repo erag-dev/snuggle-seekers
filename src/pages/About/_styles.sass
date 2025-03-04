@@ -1,0 +1,186 @@
+@use 'stylesGeneral/_base/_variables' as *
+@use 'stylesGeneral/_base/_mixins' as *
+    
+/* =======================
+ * About Page
+ * ======================= */
+
+
+/*
+ * Shelter
+ */
+.snuggle-about__shelter-gallery
+    display: flex
+    justify-content: space-between
+
+
+.snuggle-about__shelter-img
+    position: relative
+    width: 31%
+    height: pc-vw(386px)
+    overflow: hidden
+    border-radius: pc-vw(10px)
+
+    img
+        @include fullsize
+        object-fit: cover
+
+/*
+ * Our Story
+ */
+.snuggle-about__ourstory
+    .frame__header
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: pc-vw(50px)
+
+        *
+            margin-left: pc-vw(8px)
+
+        img
+            width: pc-vw(32px)
+            height: auto
+
+
+    .frame__desc
+        width: 100%
+        margin-bottom: 0px !important
+        text-align: left
+        
+        span
+            font-weight: 500
+
+.snuggle-about__ourstory-cols
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.snuggle-about__ourstory-col
+    width: 47%
+
+
+/*
+ * Pawjects
+ */
+.snuggle-about__pawjects-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    .snuggle-itembox__infos
+        background: $color--white
+
+
+/*
+ * Volunteers
+ */
+.snuggle-about__volunteers-gallery
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.snuggle-about__volunteer
+    position: relative
+    width: calc(90% / 5)
+    height: pc-vw(420px)
+    overflow: hidden
+    border-radius: pc-vw(10px)
+
+    img
+        @include fullsize
+        object-fit: cover
+
+// ===================================================================================================
+// ===================================================================================================
+
+@media screen and (max-width: 1000px)
+    /*
+     * Shelter
+     */
+    .snuggle-about__shelter-gallery
+        flex-wrap: wrap
+        justify-content: center
+
+    .snuggle-about__shelter-img
+        width: 90%
+        max-width: 500px
+        height: sp-vw(200px)
+        margin-top: sp-vw(15px)
+        border-radius: sp-vw(5px)
+
+        &:first-child
+            margin-top: 0px !important
+
+
+    /*
+     * Our Story
+     */
+    .snuggle-about__ourstory
+        .frame__header
+            margin-bottom: sp-vw(12px)
+
+            *
+                margin-left: sp-vw(4px)
+
+            img
+                width: sp-vw(12px)
+
+        .frame__desc
+            margin-bottom: sp-vw(20px) !important
+            text-align: center
+
+    .snuggle-about__ourstory-cols
+        flex-direction: column-reverse
+
+    .snuggle-about__ourstory-col
+        width: 100%
+
+
+    /*
+     * Volunteers
+     */
+    .snuggle-about__volunteers
+        .frame__desc
+            br
+                display: none
+
+    .snuggle-about__volunteers-gallery
+        display: block
+        overflow: auto
+        white-space: nowrap
+
+        > div
+            display: inline-block
+
+
+    .snuggle-about__volunteer
+        width: sp-vw(150px)
+        height: sp-vw(240px)
+        margin-left: sp-vw(15px)
+        border-radius: sp-vw(5px)
+
+        &:first-child
+            margin-left: 0 !important
+
+            
+@media screen and (max-width: 600px)
+    /*
+     * Shelter
+     */
+    .snuggle-about__shelter-img
+        border-radius: 5px
+
+    /*
+     * Our Story
+     */
+    .snuggle-about__ourstory
+        .frame__header
+            margin-bottom: sp-vw(15px)
+
+            img
+                margin-left: sp-vw(5px)
+                width: sp-vw(16px)
+
+        .frame__desc
+            margin-bottom: sp-vw(25px)

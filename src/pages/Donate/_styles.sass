@@ -1,0 +1,263 @@
+@use 'stylesGeneral/_base/_variables' as *
+@use 'stylesGeneral/_base/_mixins' as *
+    
+/* =======================
+ * Donate Page
+ * ======================= */
+
+
+/*
+ * Samples
+ */
+.snuggle-donate__samples,
+.snuggle-donate__channels
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.snuggle-donate__sample
+    position: relative
+    width: 23%
+    height: pc-vw(212px)
+    background: $color--corn2
+    border-radius: pc-vw(10px)
+    text-align: center
+
+    > p
+        @include absolute-centerY
+        left: 0
+        width: 100%
+        padding: pc-vw(15px) pc-vw(25px)
+        font-size: pc-vw(16px)
+
+
+/*
+ * Channels
+ */
+.snuggle-donate__channel
+    position: relative
+    width: 31%
+    margin-top: pc-vw(50px)
+
+    &:nth-child(-n+3)
+        margin-top: 0px
+
+    &:hover
+        .snuggle-donate__channel-thumbnail
+            .img-fit
+                transform: scale(1.05)
+
+        .snuggle-donate__channel-name
+            color: $color--pink
+
+.snuggle-donate__channel-thumbnail
+    position: relative
+    width: 100%
+    height: pc-vw(290px)
+    background: $color--corn
+    border-radius: pc-vw(10px)
+
+    .img-fit
+        max-height: 65% !important
+        transition: all 0.15s ease
+
+.snuggle-donate__channel-infos
+    position: relative
+    width: 82%
+    margin: auto
+    margin-top: pc-vw(-35px)
+    padding: pc-vw(25px)
+    background: $color--white
+    border-radius: pc-vw(10px)    
+    text-align: center
+
+.snuggle-donate__channel-name
+    margin-bottom: pc-vw(10px)
+    font-size: pc-vw(18px)
+    font-weight: 500
+    transition: all 0.15s ease
+
+.snuggle-donate__channel-num
+    font-size: pc-vw(16px)
+
+/*
+ * Dropoff
+ */
+.snuggle-donate__dropoff
+    .frame__desc
+        span
+            font-style: italic
+
+.snuggle-donate__dropoff-wishlists
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.snuggle-donate__dropoff-wishlist
+    position: relative
+    width: 48%
+    padding: pc-vw(25px)
+    background: $color--corn2
+    border-radius: pc-vw(10px)
+
+    > p
+        margin-bottom: pc-vw(25px)
+        font-size: pc-vw(18px)
+        font-weight: 500
+        text-align: center
+    
+    > div
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: flex-start
+
+        > *
+            width: 48%
+
+        *
+            font-size: pc-vw(16px)
+            line-height: 1.6
+
+
+// ===================================================================================================
+// ===================================================================================================
+
+@media screen and (max-width: 1000px)
+    /*
+     * Samples
+     */
+    .snuggle-donate__samplesholder
+        .frame__header
+            br
+                display: none
+
+    .snuggle-donate__sample
+        width: 48%
+        height: sp-vw(100px)
+        margin-top: sp-vw(15px)
+        border-radius: sp-vw(5px)
+        
+        &:nth-child(-n+2)
+            margin-top: 0px !important
+
+        > p
+            padding: sp-vw(8px) sp-vw(12px)
+            font-size: sp-vw(8px)
+
+
+    /*
+     * Channels
+     */
+    .snuggle-donate__channel
+        width: 48%
+        margin-top: sp-vw(15px)
+
+        &:nth-child(-n+3)
+            margin-top: sp-vw(15px)
+
+        &:nth-child(-n+2)
+            margin-top: 0px !important
+
+    .snuggle-donate__channel-thumbnail
+        height: sp-vw(140px)
+        border-radius: sp-vw(5px)
+
+    .snuggle-donate__channel-infos
+        width: 85%
+        margin-top: sp-vw(-15px)
+        padding: sp-vw(10px)
+        border-radius: sp-vw(5px)    
+
+    .snuggle-donate__channel-name
+        margin-bottom: sp-vw(5px)
+        font-size: sp-vw(9px)
+      
+    .snuggle-donate__channel-num
+        font-size: sp-vw(8px)
+
+    /*
+     * Dropoff
+     */
+    .snuggle-donate__dropoff-wishlists
+        flex-direction: column
+
+    .snuggle-donate__dropoff-wishlist
+        width: 100%
+        margin-top: sp-vw(15px)
+        padding: sp-vw(12px)
+        border-radius: sp-vw(5px)
+
+        &:first-child
+            margin-top: 0px !important
+
+        > p
+            margin-bottom: sp-vw(12px)
+            font-size: sp-vw(9px)
+        
+        > div
+            *
+                font-size: sp-vw(8px)
+
+
+@media screen and (max-width: 600px)
+    /*
+     * Samples
+     */
+    .snuggle-donate__sample
+        height: sp-vw(110px)
+        border-radius: 5px
+
+        > p
+            padding: sp-vw(8px) sp-vw(12px)
+            font-size: sp-vw(11px)
+
+    /*
+     * Channels
+     */
+    .snuggle-donate__channels
+        justify-content: center
+
+    .snuggle-donate__channel
+        width: 90%
+
+        &:nth-child(-n+2)
+            margin-top: sp-vw(25px) !important
+
+        &:first-child
+            margin-top: 0px !important
+
+    .snuggle-donate__channel-thumbnail
+        height: sp-vw(170px)
+        border-radius: 5px
+
+    .snuggle-donate__channel-infos
+        padding: sp-vw(15px)
+        border-radius: 5px    
+
+    .snuggle-donate__channel-name
+        font-size: sp-vw(12px)
+      
+    .snuggle-donate__channel-num
+        font-size: sp-vw(11px)
+
+    /*
+     * Dropoff
+     */
+    .snuggle-donate__dropoff-wishlist
+        margin-top: sp-vw(25px)
+        padding: sp-vw(15px)
+        border-radius: 5px
+
+        > p
+            margin-bottom: sp-vw(15px)
+            font-size: sp-vw(12px)
+        
+        > div
+            flex-direction: column
+            
+            > * 
+                width: 100%
+
+            *
+                font-size: sp-vw(11px)

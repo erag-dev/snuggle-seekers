@@ -1,0 +1,326 @@
+@use 'stylesGeneral/_base/_variables' as *
+@use 'stylesGeneral/_base/_mixins' as *
+    
+/* =======================
+ * Home Page
+ * ======================= */
+
+/*
+ * Kv
+ */
+.snuggle-home__kv
+    .frame__limit
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-top: pc-vw(50px)
+        padding-bottom: pc-vw(15px)
+
+.snuggle-home__kv-edge
+    position: absolute
+    left: 0
+    bottom: -5%
+    z-index: 1
+    width: 100%
+
+.snuggle-home__kv-texts
+    width: 44%
+
+    h2
+        font-family: $font--itim
+        font-size: pc-vw(55px)
+
+        span
+            font-family: inherit !important
+            font-size: inherit !important
+            color: $color--pink
+
+    .frame__desc
+        width: 100%
+        margin-top: pc-vw(50px)
+        text-align: left
+
+        *
+            font-size: pc-vw(18px)
+
+        span
+            font-style: italic
+
+.snuggle-home__kv-main
+    position: relative
+    width: 55%
+
+    > img:first-child
+        position: relative
+        right: pc-vw(-50px)
+        z-index: 1
+
+.snuggle-home__kv-main__text
+    position: absolute
+    z-index: 2
+    height: auto
+
+    &.text--1
+        top: 4%
+        right: 8%
+        width: pc-vw(290px)
+
+    &.text--2
+        left: 5%
+        bottom: 12%
+        width: pc-vw(285px)
+
+/*
+ * Steps
+ */
+.snuggle-home__steps
+    display: flex
+    justify-content: center
+
+.snuggle-home__step
+    position: relative
+    width: pc-vw(330px)
+    margin-left: pc-vw(100px)
+    padding: pc-vw(35px)
+    background: $color--corn2
+    border-radius: pc-vw(10px)
+    text-align: center
+
+    &:first-child
+        margin-left: 0px !important
+
+.snuggle-home__step-icon
+    position: relative
+    width: pc-vw(50px)
+    height: pc-vw(50px)
+    margin: auto
+    margin-bottom: pc-vw(15px)
+    background: $color--pink
+    border-radius: 50%
+    
+.snuggle-home__step-title
+    margin-bottom: pc-vw(8px)
+    font-family: $font--itim
+    font-size: pc-vw(20px)
+
+.snuggle-home__step-desc
+    font-size: pc-vw(16px)
+    
+
+/*
+ * Pets
+ */
+.snuggle-home__pets-list
+    position: relative
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+
+    > div
+        width: 31%
+
+/*
+ * Help
+ */
+.snuggle-home__help
+    .frame__header
+        margin-bottom: pc-vw(50px)
+
+.snuggle-home__help-items
+    display: flex
+    justify-content: space-between
+
+
+
+// ===================================================================================================
+// ===================================================================================================
+
+@media screen and (max-width: 1000px)
+    /*
+     * Kv
+     */
+    .snuggle-home__kv 
+        .frame__limit
+            display: block
+            padding-top: sp-vw(20px)
+
+        .frame__desc
+            margin-top: sp-vw(12px)
+            margin-bottom: sp-vw(20px)
+
+            *
+                font-size: sp-vw(9px)
+                text-align: center
+
+        .btn
+            margin: auto
+
+        .btn__text
+            font-size: sp-vw(9px)
+
+    .snuggle-home__kv-texts
+        position: relative
+        z-index: 2
+        width: 100%
+        text-align: center
+
+        h2
+            font-size: sp-vw(20px)
+
+    .snuggle-home__kv-main
+        width: 70%
+        margin: auto
+        margin-top: sp-vw(20px)
+
+    .snuggle-home__kv-main__text
+        &.text--1
+            top: 0
+            right: -20%
+            width: sp-vw(120px)
+            
+        &.text--2
+            left: -20%
+            bottom: 12%
+            width: sp-vw(117px)
+
+
+    /*
+     * Steps
+     */
+    .snuggle-home__steps
+        display: block
+
+    .snuggle-home__step
+        width: sp-vw(170px)
+        margin: auto !important
+        margin-top: sp-vw(15px) !important
+        padding: sp-vw(15px)
+        border-radius: sp-vw(5px)
+
+        &:first-child
+            margin-top: 0px !important
+            margin-left: auto !important
+
+    .snuggle-home__step-icon
+        width: sp-vw(25px)
+        height: sp-vw(25px)
+        margin-bottom: sp-vw(7px)
+
+        img
+            width: sp-vw(15px)
+        
+    .snuggle-home__step-title
+        margin-bottom: sp-vw(4px)
+        font-size: sp-vw(10px)
+
+    .snuggle-home__step-desc
+        font-size: sp-vw(8px)
+
+        
+    /*
+     * Pets
+     */
+    .snuggle-home__pets-list
+        > div
+            width: 48%
+
+    /*
+     * Help
+     */
+    .snuggle-home__help
+        .frame__header
+            margin-bottom: sp-vw(20px)
+
+            br
+                display: none
+    
+    .snuggle-home__help-items
+        display: block
+
+
+@media screen and (max-width: 600px)
+    /*
+     * Kv
+     */
+    .snuggle-home__kv 
+        .frame__limit
+            padding-top: sp-vw(25px)
+
+        .frame__desc
+            margin-top: sp-vw(15px)
+            margin-bottom: sp-vw(25px)
+
+            *
+                font-size: sp-vw(12px)
+
+        .btn__text
+            font-size: sp-vw(12px)
+
+    .snuggle-home__kv-texts
+        h2
+            font-size: sp-vw(22px)
+
+    .snuggle-home__kv-main
+        width: 70%
+        margin: auto
+        margin-top: sp-vw(25px)
+
+    .snuggle-home__kv-main__text
+        &.text--1
+            top: 0
+            right: -20%
+            width: sp-vw(120px)
+            
+        &.text--2
+            left: -20%
+            bottom: 12%
+            width: sp-vw(117px)
+
+    /*
+     * Steps
+     */
+    .snuggle-home__step
+        width: sp-vw(230px)
+        margin-top: sp-vw(20px) !important
+        padding: sp-vw(25px) sp-vw(20px)
+        border-radius: 5px
+
+        &:first-child
+            margin-top: 0px !important
+            margin-left: auto !important
+
+    .snuggle-home__step-icon
+        width: sp-vw(35px)
+        height: sp-vw(35px)
+        margin-bottom: sp-vw(10px)
+
+        img
+            width: sp-vw(19px)
+        
+    .snuggle-home__step-title
+        margin-bottom: sp-vw(6px)
+        font-size: sp-vw(14px)
+
+    .snuggle-home__step-desc
+        font-size: sp-vw(11px)
+
+    /*
+     * Pets
+     */
+    .snuggle-home__pets-list
+        justify-content: center
+
+        > div
+            width: 90%
+            max-width: 380px
+
+    /*
+     * Help
+     */
+    .snuggle-home__help
+        .frame__header
+            margin-bottom: sp-vw(25px)
+
+

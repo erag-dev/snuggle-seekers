@@ -1,0 +1,252 @@
+@use 'stylesGeneral/_base/_variables' as *
+@use 'stylesGeneral/_base/_mixins' as *
+    
+/* =======================
+ * Selected Pet Page
+ * ======================= */
+
+/*
+ * Top
+ */
+.snuggle-selectedpet__top
+    .frame__limit
+        padding-top: pc-vw(30px)
+        padding-bottom: 0 !important
+
+.snuggle-selectedpet__top-main
+    width: 40vw
+    margin: auto
+
+.snuggle-selectedpet__top-text
+    position: absolute
+    z-index: 2
+
+    &.text--1
+        top: 18%
+        left: 8%
+        width: pc-vw(400px)
+
+    &.text--2
+        right: 10%
+        bottom: 32%
+        width: pc-vw(370px)
+
+.snuggle-selectedpet__top-purr
+    position: absolute
+    z-index: 3
+    font-size: pc-vw(18px)
+    font-weight: 500
+
+    &.purr--1
+        top: 50%
+        left: 18%
+
+    &.purr--2
+        top: 75%
+        left: 25%
+
+    &.purr--3
+        top: 15%
+        right: 30%
+
+    &.purr--4
+        top: 30%
+        right: 20%
+
+/*
+ * Intro
+ */
+.snuggle-selectedpet__intro
+    .frame__desc
+        *
+            line-height: 1.6
+
+        span
+            font-style: italic
+
+        &.desc--1
+            *
+                font-size: pc-vw(18px)
+
+        &.desc--2
+            .label
+                margin-top: pc-vw(50px)
+                margin-bottom: pc-vw(25px)
+                font-weight: 600
+
+            li
+                list-style: none !important
+
+/*
+ * Gallery
+ */
+.snuggle-selectedpet__gallery
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: pc-vw(50px)
+
+.snuggle-selectedpet__photo
+    position: relative
+    width: 31%
+    height: pc-vw(450px)
+    margin-top: pc-vw(50px)
+    overflow: hidden
+    border-radius: pc-vw(10px)
+
+    &:nth-child(-n+3)
+        margin-top: 0px !important
+
+    img
+        @include fullsize
+        object-fit: cover
+
+
+
+// ===================================================================================================
+// ===================================================================================================
+
+@media screen and (max-width: 1000px)
+    /*
+     * Top
+     */
+    .snuggle-selectedpet__top
+        .frame__limit
+            padding-top: sp-vw(15px)
+
+    .snuggle-selectedpet__top-main
+        width: 45vw
+
+    .snuggle-selectedpet__top-text
+        &.text--1
+            top: 18%
+            left: 0%
+            width: sp-vw(120px)
+
+        &.text--2
+            right: 0%
+            bottom: 28%
+            width: sp-vw(110px)
+
+    .snuggle-selectedpet__top-purr
+        font-size: sp-vw(8px)
+
+        &.purr--1
+            top: 55%
+            left: 10%
+
+        &.purr--2
+            top: 80%
+            left: 20%
+
+        &.purr--3
+            top: 20%
+            right: 25%
+
+        &.purr--4
+            top: 35%
+            right: 15%
+
+    /*
+     * Intro
+     */
+    .snuggle-selectedpet__intro
+        .frame__desc
+
+            &.desc--1
+                *
+                    font-size: sp-vw(9px)
+
+            &.desc--2
+                .label
+                    margin-top: sp-vw(20px)
+                    margin-bottom: sp-vw(10px)
+
+
+    /*
+     * Gallery
+     */
+    .snuggle-selectedpet__gallery
+        margin-bottom: sp-vw(20px)
+
+    .snuggle-selectedpet__photo
+        position: relative
+        width: 48%
+        height: sp-vw(165px)
+        margin-top: sp-vw(20px)
+        border-radius: sp-vw(5px)
+
+        &:nth-child(-n+3)
+            margin-top: sp-vw(20px) !important
+
+        &:nth-child(-n+2)
+            margin-top: 0px !important
+
+
+            
+@media screen and (max-width: 600px)
+    /*
+     * Top
+     */
+    .snuggle-selectedpet__top
+        .frame__limit
+            padding-top: sp-vw(20px)
+
+    .snuggle-selectedpet__top-main
+        width: 60vw
+        margin-top: sp-vw(55px)
+
+    .snuggle-selectedpet__top-text
+        &.text--1
+            top: 4%
+            left: 0%
+            width: sp-vw(170px)
+
+        &.text--2
+            right: 0%
+            bottom: 8%
+            width: sp-vw(160px)
+
+    .snuggle-selectedpet__top-purr
+        font-size: sp-vw(11px)
+
+        &.purr--1
+            top: 55%
+            left: 0%
+
+        &.purr--2
+            top: 80%
+            left: 15%
+
+        &.purr--3
+            top: 25%
+            right: 15%
+
+        &.purr--4
+            top: 40%
+            right: 0%
+
+    /*
+     * Intro
+     */
+    .snuggle-selectedpet__intro
+        .frame__desc
+            &.desc--1
+                *
+                    font-size: sp-vw(12px)
+
+            &.desc--2
+                .label
+                    margin-top: sp-vw(25px)
+                    margin-bottom: sp-vw(15px)
+
+
+    /*
+     * Gallery
+     */
+    .snuggle-selectedpet__gallery
+        margin-bottom: sp-vw(25px)
+
+    .snuggle-selectedpet__photo
+        border-radius: 5px
+

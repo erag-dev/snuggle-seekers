@@ -1,0 +1,285 @@
+@use 'stylesGeneral/_base/_variables' as *
+@use 'stylesGeneral/_base/_mixins' as *
+    
+/* =======================
+ * Contact Page
+ * ======================= */
+
+/*
+ * Intro
+ */
+.snuggle-contact__intro
+    .frame__limit
+        padding-bottom: pc-vw(170px)
+
+/*
+ * Form Holder
+ */
+.snuggle-contact__formholder
+    background: $color--corn
+
+    .frame__limit
+        display: flex
+        justify-content: space-between
+        z-index: 2
+
+        > div
+            width: 40%
+            margin-right: 3%
+
+    .frame__header,
+    .frame__desc
+        width: 100%
+        text-align: left
+
+
+.snuggle-contact__formholder-edge
+    position: absolute
+    z-index: 1
+    width: 100%
+
+    &.edge--1
+        top: pc-vw(-190px)
+        left: 0
+    
+    &.edge--2
+        bottom: pc-vw(-50px)
+
+
+.snuggle-contact__formholder-link
+    margin-top: pc-vw(15px)
+
+    &:first-child
+        margin-top: 0px !important
+
+    a
+        display: inline-block
+
+        &:hover
+            span
+                color: $color--pink
+                
+
+    *
+        font-size: pc-vw(16px)
+
+    span
+        transition: all 0.15s ease
+
+.snuggle-contact__formholder-disclaimer
+    margin-top: pc-vw(50px)
+    padding: pc-vw(30px)
+    background: $color--corn2
+    border-radius: pc-vw(10px)
+
+    .frame__desc
+        margin-bottom: 0px !important
+        
+        > p:first-child
+            margin-bottom: pc-vw(25px)
+            font-weight: 500
+
+
+/*
+ * Form
+ */
+.snuggle-contact__form
+    position: relative
+    width: 50%
+    padding: pc-vw(40px)
+    background: $color--corn2
+    border-radius: pc-vw(10px)
+
+    .btn
+        margin-top: pc-vw(50px)
+
+        
+/*
+ * FAQs
+ */
+.snuggle-contact__faqsholder
+    .frame__header
+        margin-bottom: pc-vw(50px)
+
+.snuggle-contact__faq
+    position: relative
+    width: 100%
+    max-width: pc-vw(1000px)
+    margin: auto
+    margin-top: pc-vw(35px)
+    overflow: hidden
+    border-radius: pc-vw(10px)
+
+    &:first-child
+        margin-top: 0px !important
+
+    &.is--active
+        .snuggle-contact__faq-title
+            &::after
+                transform: rotate(40deg)
+
+        .snuggle-contact__faq-body
+            display: block
+        
+
+.snuggle-contact__faq-title,
+.snuggle-contact__faq-body
+    position: relative
+    width: 100%
+    padding: pc-vw(12px) pc-vw(30px)
+
+.snuggle-contact__faq-title
+    display: flex
+    justify-content: space-between
+    background: $color--corn
+    cursor: pointer
+
+    &::after
+        content: ''
+        width: pc-vw(22px)
+        height: pc-vw(22px)
+        background-image: url('assets/paw-outline-3.svg')
+        background-size: contain
+        background-repeat: no-repeat
+        transition: all 0.15s ease
+
+    *
+        font-size: pc-vw(16px)
+        font-weight: 500
+
+.snuggle-contact__faq-body
+    display: none
+    padding-top: pc-vw(25px)
+    padding-bottom: pc-vw(25px)
+    background: $color--white
+
+    *
+        font-size: pc-vw(16px)
+
+
+// ===================================================================================================
+// ===================================================================================================
+
+
+@media screen and (max-width: 1000px)
+    /*
+     * Intro
+     */
+    .snuggle-contact__intro
+        .frame__limit
+            padding-bottom: sp-vw(50px)
+
+    /*
+     * Form Holder
+     */
+    .snuggle-contact__formholder
+        .frame__limit
+            flex-wrap: wrap
+
+            > div
+                width: 100%
+                margin-right: 0%
+
+        .frame__header,
+        .frame__desc
+            text-align: center
+
+        .frame__header
+            br
+                display: none
+
+    .snuggle-contact__formholder-link
+        margin-top: sp-vw(15px)
+
+        *
+            font-size: sp-vw(8px)
+
+    .snuggle-contact__formholder-disclaimer
+        display: none
+
+    /*
+     * Form
+     */
+    .snuggle-contact__form
+        width: 100%
+        padding: sp-vw(20px)
+        margin-top: sp-vw(20px)
+        border-radius: sp-vw(5px)
+
+        .btn
+            margin-top: sp-vw(20px)
+
+            
+    /*
+     * FAQs
+     */
+    .snuggle-contact__faqsholder
+        .frame__header
+            margin-bottom: sp-vw(20px)
+
+    .snuggle-contact__faq
+        max-width: 100%
+        margin-top: sp-vw(15px)
+        border-radius: sp-vw(5px)
+
+    .snuggle-contact__faq-title,
+    .snuggle-contact__faq-body
+        padding: sp-vw(6px) sp-vw(15px)
+
+    .snuggle-contact__faq-title
+        &::after
+            width: sp-vw(11px)
+            height: sp-vw(11px)
+
+        *
+            font-size: sp-vw(8px)
+
+    .snuggle-contact__faq-body
+        padding-top: sp-vw(13px)
+        padding-bottom: sp-vw(13px)
+
+        *
+            font-size: sp-vw(8px)
+
+
+@media screen and (max-width: 600px)
+    /*
+     * Form Holder
+     */
+    .snuggle-contact__formholder-link
+        margin-top: sp-vw(10px)
+        
+        *
+            font-size: sp-vw(11px)
+
+    /*
+     * Form
+     */
+    .snuggle-contact__form
+        padding: sp-vw(20px) sp-vw(15px)
+        border-radius: 5px
+
+        .btn
+            margin-top: sp-vw(25px)
+
+            
+    /*
+     * FAQs
+     */
+    .snuggle-contact__faqsholder
+        .frame__header
+            margin-bottom: sp-vw(25px)
+
+    .snuggle-contact__faq
+        margin-top: sp-vw(15px)
+        border-radius: 5px
+
+    .snuggle-contact__faq-title,
+    .snuggle-contact__faq-body
+        *
+            font-size: sp-vw(11px)
+
+    .snuggle-contact__faq-title
+        &::after
+            width: sp-vw(13px)
+            height: sp-vw(13px)

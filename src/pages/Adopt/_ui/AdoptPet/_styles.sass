@@ -1,0 +1,128 @@
+@use 'stylesGeneral/_base/_variables' as *
+@use 'stylesGeneral/_base/_mixins' as *
+    
+/* =======================
+ * Adopt Page
+ * ======================= */
+
+.snuggle-adopt__pet
+    position: relative
+    margin-bottom: pc-vw(50px)
+
+    &:hover
+        img
+            transform: scale(1.05)
+
+        .snuggle-adopt__pet-link
+            text-decoration-color: $color--pink
+        
+            p
+                color: $color--pink
+
+.snuggle-adopt__pet-img
+    position: relative
+    width: 100%
+    height: pc-vw(500px)
+    background: $color--corn
+    border-radius: pc-vw(10px)
+
+    img.size--90
+        max-height: 85% !important
+        transition: all 0.15s ease
+
+.snuggle-adopt__pet-infos
+    position: relative
+    width: 85%
+    margin: auto
+    margin-top: pc-vw(-50px)
+    padding: pc-vw(18px) pc-vw(23px)
+    background: $color--white
+    border-radius: pc-vw(10px)
+    text-align: center
+
+.snuggle-adopt__pet-name
+    margin-bottom: pc-vw(10px)
+    font-size: pc-vw(18px)
+    font-weight: 500
+    color: $color--pink
+
+.snuggle-adopt__pet-agesex
+    margin-bottom: pc-vw(10px)
+    font-size: pc-vw(14px)
+    font-style: italic
+
+.snuggle-adopt__pet-desc
+    margin-bottom: pc-vw(15px)
+    font-size: pc-vw(16px)
+
+.snuggle-adopt__pet-link
+    display: inline-block
+    font-size: pc-vw(14px)
+    text-decoration: underline
+    transition: all 0.15s ease
+
+    p
+        transition: all 0.15s ease
+        
+        
+
+
+// ===================================================================================================
+// ===================================================================================================
+
+@media screen and (max-width: 1000px)
+    .snuggle-adopt__pet
+        margin-bottom: sp-vw(25px)
+
+    .snuggle-adopt__pet-img
+        height: sp-vw(250px)
+        border-radius: sp-vw(5px)
+
+    .snuggle-adopt__pet-infos
+        width: 90%
+        margin-top: sp-vw(-25px)
+        padding: sp-vw(8px) sp-vw(5px)
+        border-radius: sp-vw(5px)
+
+    .snuggle-adopt__pet-name
+        margin-bottom: sp-vw(5px)
+        font-size: sp-vw(9px)
+
+    .snuggle-adopt__pet-agesex
+        margin-bottom: sp-vw(5px)
+        font-size: sp-vw(7px)
+
+    .snuggle-adopt__pet-desc
+        margin-bottom: sp-vw(7px)
+        font-size: sp-vw(8px)
+
+    .snuggle-adopt__pet-link
+        font-size: sp-vw(7px)
+
+
+@media screen and (max-width: 600px)
+    .snuggle-adopt__pet-img
+        height: sp-vw(280px)
+        border-radius: 5px
+
+    .snuggle-adopt__pet-infos
+        width: 88%
+        padding: sp-vw(15px) sp-vw(12px)
+        border-radius: 5px
+
+    .snuggle-adopt__pet-name
+        margin-bottom: sp-vw(12px)
+        font-size: sp-vw(12px)
+
+    .snuggle-adopt__pet-agesex
+        margin-bottom: sp-vw(7px)
+        font-size: sp-vw(11px)
+
+    .snuggle-adopt__pet-desc
+        margin-bottom: sp-vw(7px)
+        font-size: sp-vw(11px)
+
+    .snuggle-adopt__pet-link
+        font-size: sp-vw(11px)
+
+

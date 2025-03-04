@@ -1,0 +1,104 @@
+@use 'stylesGeneral/_base/_variables' as *
+@use 'stylesGeneral/_base/_mixins' as *
+    
+/* =======================
+ * Adopt Page
+ * ======================= */
+
+/*
+ * Pets
+ */
+.snuggle-adopt__pets-list
+    position: relative
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+
+    > div
+        width: 31%
+
+/*
+ * Journey
+ */
+.snuggle-adopt__journey
+    .frame__header
+        margin-bottom: pc-vw(50px)
+
+.snuggle-adopt__journey-cols
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.snuggle-adopt__journey-col
+    &.col--1
+        width: 35%
+
+        img
+            @include fullsize
+            object-fit: cover
+
+    &.col--2
+        width: 60%
+
+    .frame__desc
+        width: 100%
+        margin-bottom: 0px !important
+        text-align: left
+
+// ===================================================================================================
+// ===================================================================================================
+
+@media screen and (max-width: 1000px)
+    /*
+     * Pets
+     */
+    .snuggle-adopt__pets-list
+        > div
+            width: 48%
+
+    /*
+     * Journey
+     */
+    .snuggle-adopt__journey
+        .frame__header
+            margin-bottom: sp-vw(12px)
+
+    .snuggle-adopt__journey-cols
+        flex-wrap: wrap
+        flex-direction: column
+
+    .snuggle-adopt__journey-col
+        &.col--1
+            width: 60%
+            margin-bottom: sp-vw(20px)
+
+        &.col--2
+            width: 100%
+
+        .frame__desc
+            text-align: center
+   
+@media screen and (max-width: 600px)
+    /*
+     * Pets
+     */
+    .snuggle-adopt__pets-list
+        justify-content: center
+
+        > div
+            width: 90%
+            max-width: 380px
+
+    /*
+     * Journey
+     */
+    .snuggle-adopt__journey
+        .frame__header
+            margin-bottom: sp-vw(15px)
+
+    .snuggle-adopt__journey-col
+        &.col--1
+            margin-bottom: sp-vw(25px)
+
