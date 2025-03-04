@@ -1,0 +1,1 @@
+import{j as s}from"./index-iVrxHQOE.js";import"./_styles-BIiPhsNJ.js";const a=({extraClass:e,topText:t,children:r})=>s.jsx("section",{className:`${e} snuggle-subpageintro frame`,children:s.jsxs("div",{className:"frame__limit",children:[s.jsx("p",{className:"snuggle-subpageintro__toptext",children:t}),r]})});export{a as S};
