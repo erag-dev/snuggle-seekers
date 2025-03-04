@@ -1,1 +1,0 @@
-import{j as s}from"./index-zF0nLBBT.js";import{A as r,B as e}from"./index-CyNVn3rR.js";const t="/snuggle-seekers/assets/404-DcEhQRBE.png",o=()=>s.jsx("div",{className:"error404",children:s.jsxs("div",{className:"error404__inner",children:[s.jsx(r,{src:t}),s.jsx(e,{isDiv:!0,btnLbl:"Go Back Home",extraClass:"pink align--c"})]})});export{o as default};
